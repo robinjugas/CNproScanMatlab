@@ -76,7 +76,11 @@ coverageSignal=coverage(:,2)'; %take only read-depth values
 writecell(CNVtable,['CNV_detection_v6.xls'])
 ```
 
-## Usage:
+## Output:
 Output is either Matlab cell table or Excel spreadsheet with detected CNV per row. 
 
+## Citation:
+
+
 ## License:
+MIT License
