@@ -1,11 +1,16 @@
 # CNproScan
 CNproScan is a set of MATLAB functions to detect CNV in bacteria genomes. 
+The R version is here: (https://github.com/robinjugas/CNproScan)
 
 ## Installation
 Clone the whole repository or the folder with MATLAB files (CNproScan_v6_matlab) and modify the running script with corresponding folder/sample names. 
 CNproScan' Matlab dependencies are "Bioinformatics Toolbox" and "Statistics and Machine Learning Toolbox". Tested on Matlab > 2019. 
 The paralell version requires the "Parallel Computing Toolbox" for Matlab. 
 
+```
+git clone https://github.com/robinjugas/CNproScanMatlab
+cd CNproScanMatlab
+```
 
 ## Input files:
 Several input files are neccessary:
@@ -39,7 +44,7 @@ MATLAB script:
 ```
 clc, clear all
 
-addpath('CNV_detekce_final_v6_CNV2'); %folder with CNproScan functions
+addpath('CNproScan_v6_matlab'); %folder with CNproScan functions
 
 %% INITIALIZATION
 coverage_file = 'CNVseq.coverage';
@@ -70,3 +75,8 @@ coverageSignal=coverage(:,2)'; %take only read-depth values
 % Writing into excel spreasheet
 writecell(CNVtable,['CNV_detection_v6.xls'])
 ```
+
+## Usage:
+Output is either Matlab cell table or Excel spreadsheet with detected CNV per row. 
+
+## License:
